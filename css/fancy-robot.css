@@ -1,38 +1,490 @@
 .robot-container {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 500px;
+    background: transparent;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .robot-face-shape {
+    width: 500px;
+    height: 625px;
+    border-radius: 70% 70% 100% 100% / 70% 70% 100% 100%;
+    background: rgb(255,255,245);
+    background: radial-gradient(circle, rgba(255,255,245,1) 31%, rgba(255,255,255,1) 100%);
+    position: relative;
+    z-index: 0;
+    box-shadow:inset 0 3px 12px 12px black;
 }
-
+/* .robot-face-shape-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+    background: rgb(255,255,245);
+    background: radial-gradient(circle, rgba(255,255,245,1) 50%, rgba(255,255,255,1) 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+} */
+.robot-forehead {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px 10px 50% 50%;
+    background: rgb(155, 154, 154);
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+.robot-lens {
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.robot-brow {
+    width: 40%;
+    height: 3px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+.robot-eyes {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+}
+.robot-eyes-2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+}
+.robot-eyes-2 .robot-eye-left {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    z-index: 2;
+}
+.robot-eyes-2 .robot-eye-right {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    position: absolute;
+    top: 0;
+    right: 20%;
+    z-index: 2;
+}
+.robot-eyes-2 .robot-eye-left .iris-left {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: black;
+    border: 1px solid rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 15%;
+    left: 13%;
+    z-index: 3;
+}
+.robot-eyes-2 .robot-eye-right .iris-right {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: black;
+    border: 1px solid rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 15%;
+    right: 13%;
+    z-index: 3;
+}
 .robot-eye-left {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    position: relative;
+    top: 0%;
+    left: 20%;
+    z-index: 2;
 }
-
+.iris-left  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    border: 1px solid rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 27%;
+    left: 23%;
+    z-index: 3;
+}
 .robot-eye-right {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    position: absolute;
+    top: 0;
+    right: 20%;
+    z-index: 2;
+}
+.iris-right {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    border: 1px solid rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 27%;
+    right: 23%;
+    z-index: 3;
 }
 
 .robot-ear-left {
+    width: 50px;
+    height: 250px;
+    border-radius: 25%;
+    background: linear-gradient(to bottom, rgb(255, 65, 65), red, red);
+    transform: rotate(-4deg);
+    position: absolute;
+    top: 40%;
+    left: 29%;
+    z-index: -1;
 }
 
 .robot-ear-right {
+    width: 50px;
+    height: 250px;
+    border-radius: 25%;
+    background: linear-gradient(to bottom, rgb(255, 65, 65), red, red);
+    transform: rotate(4deg);
+    position: absolute;
+    top: 40%;
+    right: 29%;
+    z-index: -1;
 }
 
 .robot-nose {
+    width: 16px;
+    height: 48px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    box-shadow: 0px 4px 2px rgb(255, 255, 255);
 }
-
+.robot-nose .robot-inner-nose-1 {
+    width: 8px;
+    height: 38px;
+    background: black;
+    border-radius: 25%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+}
+.robot-nose-2 {
+    width: 20px;
+    height: 32px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    box-shadow: 0px 4px 2px rgb(255, 255, 255);
+}
+.robot-nose-2 .robot-inner-nose-2 {
+    width: 18px;
+    height: 20px;
+    background: black;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+}
 .robot-teeth {
+    width: 300px;
+    height: 100px;
+    background: rgb(60, 60, 60);
+    border-radius: 10px 10px 50% 50%;
+    box-shadow: 0 6px 4px gray;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
 }
 
 .robot-tooth {
+    width: 280px;
+    height: 50px;
+    background: black;
+    border-radius: 10px 10px 50% 50%;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.robot-lip {
+    width: 150px;
+    height: 50px;
+    background: rgb(60, 60, 60);
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
 }
 
+
 .robot-hair-style {
+    --c: 55;
+    width: 300px;
+    height: 50px;
+    aspect-ratio: 3/2;
+    background: #f9d851;
+    mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(100% + 100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
+    clip-path: ellipse(calc(var(--c)*1%) 100% at bottom);
+        top: 0;
+        z-index: 5;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.robot-hair-style-2 {
+    --c: 55;
+    width: 500px;
+    height: 50px;
+    aspect-ratio: 3/2;
+    background: #e9c42d;
+    mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(100% + 100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
+    clip-path: ellipse(calc(var(--c)*1%) 100% at bottom);
+        top: 0;
+        z-index: 5;
+    position: absolute;
+    top: 26%;
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+}
+.robot-hair-style-3 {
+    --c: 55;
+    width: 500px;
+    height: 50px;
+    aspect-ratio: 3/2;
+    background: #f4d34d;
+    mask: radial-gradient(calc(var(--c)*1%) 100% at 50% calc(100% + 100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000);
+    clip-path: ellipse(calc(var(--c)*1%) 100% at bottom);
+        top: 0;
+        z-index: 5;
+    position: absolute;
+    top: 26%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(25deg);
 }
 
 .robot-hair-one {
+    width: 100px;
+    height: 6px;
+    background: goldenrod;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(25deg);
+    top: 10%;
+    left: 40%;
+    z-index: 7;
 }
 
 .robot-hair-two {
+    width: 100px;
+    height: 6px;
+    background: goldenrod;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(25deg);
+    top: 10%;
+    left: 75%;
+    z-index: 7;
 }
 
 .robot-hair-three {
+    width: 100px;
+    height: 6px;
+    background: goldenrod;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(25deg);
+    top: 10%;
+    left: 50%;
+    z-index: 7;
+}
+.robot-hair-four {
+    width: 100px;
+    height: 6px;
+    background: goldenrod;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(25deg);
+    top: 10%;
+    left: 25%;
+    z-index: 7;
+}
+.robot-hair-five {
+    width: 100px;
+    height: 6px;
+    background: goldenrod;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(25deg);
+    top: 10%;
+    left: 0%;
+    z-index: 7;
+}
+.robot-body {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background: transparent;
+    position: relative;
+    top: 9rem;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.robot-neck {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(gray, black, white);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+.robot-chest {
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(to bottom, black 10%, gray 40%, rgb(53, 53, 53) 90%, black 100%);
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.innerbox {
+    width:350px;
+    height: 250px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+}
+.dot-1 {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgb(26, 26, 26);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 6;
+}
+.dot-2 {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgb(26, 26, 26);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 6;
+}
+.dot-3 {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgb(26, 26, 26);
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 6;
+}
+.dot-4 {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgb(26, 26, 26);
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 6;
+}
+.robot-left-arm {
+    width: 200px;
+    height: 225px;
+    border-radius: 20px 0 0 20px;
+    background: white;
+    position: absolute;
+    top: 50px;
+    left: -150px;
+    z-index: 5;
+}
+.robot-right-arm {
+    width: 200px;
+    height: 225px;
+    border-radius: 0 20px 20px 0;
+    background: white;
+    position: absolute;
+    top: 50px;
+    right: -150px;
+    z-index: 5;
+}
+.inner-left {
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(to left, black, gray, transparent);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.inner-right {
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(to right, black, gray, transparent);
+    position: absolute;
+    top: 0;
 }
